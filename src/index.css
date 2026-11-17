@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+  body { @apply bg-ivory text-charcoal font-sans antialiased; text-rendering: optimizeLegibility; }
+  h1, h2, h3, h4 { @apply font-serif; }
+  ::selection { @apply bg-gold/30 text-forest; }
+}
+
+@layer components {
+  .container-lux { @apply max-w-7xl mx-auto px-5 sm:px-8 lg:px-12; }
+  .btn-primary { @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-forest text-ivory text-[11px] font-medium uppercase tracking-ultra transition-all duration-300 hover:bg-forest-dark hover:shadow-lg; }
+  .btn-gold { @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gold text-forest text-[11px] font-semibold uppercase tracking-ultra transition-all duration-300 hover:bg-gold-dark hover:text-ivory hover:shadow-lg; }
+  .btn-outline { @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-forest/40 text-forest text-[11px] font-medium uppercase tracking-ultra transition-all duration-300 hover:bg-forest hover:text-ivory; }
+  .btn-ghost-ivory { @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-ivory/60 text-ivory text-[11px] font-medium uppercase tracking-ultra backdrop-blur-sm transition-all duration-300 hover:bg-ivory hover:text-forest; }
+  .eyebrow { @apply text-[10px] font-semibold uppercase tracking-ultra text-gold; }
+  .heading-lux { @apply font-serif font-light text-forest; }
+  .input-lux { @apply w-full px-4 py-3 border border-forest/15 bg-white text-sm text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:border-gold transition-colors; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .shadow-lux { box-shadow: 0 20px 60px -20px rgba(24, 59, 50, 0.25); }
+  .shadow-card { box-shadow: 0 8px 30px -12px rgba(24, 59, 50, 0.15); }
+}
